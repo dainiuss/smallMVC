@@ -3,32 +3,46 @@ smallMVC
 
 smallMVC is a small PHP MVC framework
 
-INSTRUCTIONS:<br />
-1. Create new web directory<br />
-2. Move framework to the newly created web directory<br />
-3. cd into the directory above<br />
-4. Run framework/generate.php and follow the instructions<br />
+<h3>INSTRUCTIONS:</h3>
+<ol>
+<li>Create new web directory</li>
+<li>Move framework to the newly created web directory</li>
+<li>cd into the directory above</li>
+<li>Run framework/generate.php and follow the instructions</li>
+</ol>
 
-AVAILABLE OPERATIONS:<br />
-1. Generate a new website<br />
-2. 2. Generate a new controller<br />
-3. 3. Generate a new model<br />
-4. 4. List the directory<br />
-5. 5. Delete the website<br />
-6. 0. Exit<br />
+<h3>AVAILABLE OPERATIONS:</h3>
+<ol start="0">
+<li>Exit</li>
+<li>Generate a new website</li>
+<li>Generate a new controller</li>
+<li>Generate a new model</li>
+<li>List the directory</li>
+<li>Delete the website</li>
+</ol>
 
-GENERATED DIRECTORY STRUCTURE:<br />
-css/<br />
-framework/<br />
-images/<br />
-js/<br />
-lib/<br />
-protected/<br />
-         /components     - contains Constants class<br />
-         /config         - database connection configuration<br />
-         /controllers    - all controllers are here<br />
-         /data           - database SQL source code<br />
-         /models         - all models are here<br />
-         /views/         - all views are here<br />
-               /layouts  - main layouts<br />
-               /web      - specific controllers views, called from controllers actions<br />
+<h3>GENERATED DIRECTORY STRUCTURE:</h3>
+<ul>
+<li>css/</li>
+<li>framework/</li>
+<li>images/</li>
+<li>js/</li>
+<li>lib/</li>
+<li>protected/</li>
+
+         <ul>
+         <li>/components     - contains Constants class</li>
+         <li>/config         - database connection configuration</li>
+         <li>/controllers    - all controllers are here</li>
+         <li>/data           - database SQL source code</li>
+         <li>/models         - all models are here</li>
+         <li>/views/         - all views are here</li>
+
+                  <ul>
+                  <li>/layouts  - main layouts</li>
+                  <li>/web      - specific controllers views, called from controllers actions</li>
+                  </ul>
+
+         </ul>
+
+</ul>
