@@ -11,11 +11,11 @@ INSTRUCTIONS:
 
 AVAILABLE OPERATIONS:
 1. Generate a new website
-2. Generate a new controller
-3. Generate a new model
-4. List the directory
-5. Delete the website
-0. Exit
+2. 2. Generate a new controller
+3. 3. Generate a new model
+4. 4. List the directory
+5. 5. Delete the website
+6. 0. Exit
 
 GENERATED DIRECTORY STRUCTURE:
 css/
