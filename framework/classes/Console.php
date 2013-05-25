@@ -27,16 +27,10 @@ class Console {
         $this->modelDir = $this->protected . "models/";
     }
     
-    /**
-     * Run the menu
-     */
     public function run(){
         $this->menu();
     }
     
-    /** 
-     * Menu with available operation display
-     */
     private function menu(){
         while(true){
             echo "\n---------------------------\n";
@@ -45,6 +39,7 @@ class Console {
             echo "2 - generate a new controller\n";
             echo "3 - generate a new model\n";
             echo "4 - list this directory\n";
+            echo "5 - delete website\n";
             echo "0 - exit\n";
             echo "---------------------------\n";
             $ans = readline('Enter selection: ');
@@ -71,13 +66,20 @@ class Console {
                     break;
                 case 4:
                     $this->listDirectory();
+                    break;
+                case 5:
+                    $ans = readline('Are you sure you want to delete all your directories and files(y/n)?: ');
+                    if('y' == trim(strtolower($ans))) {
+                        $this->removeDirs();
+                        $this->removeFiles();
+                    }
+                    break;
+                default:
+                    exit();
             }
         }
     }
     
-    /**
-     * Generate a new website
-     */
     private function newWebsite(){
         echo "---> Trying to generate a new website...\n";
         echo $this->protected;
@@ -108,9 +110,6 @@ class Console {
         }
     }
     
-    /**
-     * Generate a new constroller
-     */
     private function newController(){
         $ans = readline('Enter controller name: ');
         $controller = ucfirst(trim($ans))."Controller";
@@ -139,9 +138,6 @@ class Console {
         }
     }
     
-    /**
-     * Generate a new model
-     */
     private function newModel(){
         $ans = readline('Enter model name: ');
         $model = ucfirst(trim($ans));
@@ -186,9 +182,6 @@ class Console {
         }
     }
     
-    /**
-     * Generate directory structure
-     */
     private function generateDirStructure(){
         mkdir("css",0751,true);
         mkdir("images",0771,true);
@@ -205,9 +198,6 @@ class Console {
         mkdir("protected/views/web",0751,true);
     }
     
-    /**
-     * Generate base wesbite files
-     */
     private function generateStaticFiles(){
         PageGenerator::createFile("protected/components/Constants.php", PageGenerator::staticData('constants'));
         PageGenerator::createFile("protected/config/config.php", PageGenerator::staticData('config'));
@@ -227,16 +217,10 @@ class Console {
         PageGenerator::createFile("css/main.min.css", PageGenerator::staticData('css-min'));
     }
     
-    /**
-     * Copy 3rd party libraries to a new website
-     */
     private function copyVendorLibraries(){
         shell_exec("cp -r " . $this->frameworkDir . "/vendor/* lib/");
     }
     
-    /**
-     * Remove directories
-     */
     private function removeDirs(){
         /* Just to be save - we will not iterate through dirs */
         $this->rrmdir("css");
@@ -246,16 +230,10 @@ class Console {
         $this->rrmdir("protected");
     }
     
-    /**
-     * Remove files
-     */
     private function removeFiles(){
         unlink("index.php");
     }
     
-    /**
-     * List directory
-     */
     private function listDirectory(){
         echo "\nListing this directory:\n";
         echo shell_exec("ls -l");

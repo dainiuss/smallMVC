@@ -25,7 +25,7 @@
 
 /* Define required constants */
 defined('DEBUG') or define('DEBUG',false);
-defined('WEB_PATH') or define('WEB_PATH',dirname(dirname(__FILE__)).'/');
+defined('WEB_PATH') or define('WEB_PATH',dirname(dirname(__FILE__)));
 defined('MAIN_PATH') or define('MAIN_PATH',dirname(__FILE__));
 defined('PROTECTED_PATH') or define('PROTECTED_PATH',dirname(dirname(__FILE__)).'/protected');
 defined('DIRECTORY_SEPARATOR') or define('DIRECTORY_SEPARATOR','/');

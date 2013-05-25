@@ -1,17 +1,12 @@
 <?php
 /**
- * PageGenerator class
+ * PageGenerator
  *
  * @author dainius
  */
 
 class PageGenerator {
 
-    /**
-     * Create a new file and write contents into it
-     * @param string $fileName
-     * @param string $str
-     */
     public static function createFile($fileName, $str){
         if(!file_exists($fileName)) {
             if(touch($fileName)) {
@@ -25,12 +20,6 @@ class PageGenerator {
         }
     }
     
-/**
- * Generates dynamic file data
- * @param string $name
- * @param string $type
- * @return string of dynamicly generated data
- */
 public static function dynamicData($name, $type){
     
     $controller = <<<EOF
@@ -191,9 +180,9 @@ EOF;
 }
     
 /**
- * This is all staticly generated data file
- * @param string $file - file name
- * @return string static data
+ * This is all generated data file
+ * @param string $file
+ * @return string data
  */
 public static function staticData($file){
     $protected = dirname(dirname(__FILE__))."/Main.php";
@@ -222,8 +211,6 @@ EOF;
  * Configuration file
  */
 return array(
-
-	'website_name'   =>'Small MVC',
 
 	/* Database connection */
 	'dsn' 			 => 'mysql:host=localhost;dbname=database_name',
