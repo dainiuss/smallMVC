@@ -4,10 +4,10 @@ smallMVC
 smallMVC is a small PHP MVC framework
 
 INSTRUCTIONS:
-1. Create new web directory
-2. Move framework to the newly created web directory
-3. cd into the directory above
-4. Run framework/generate.php and follow the instructions
+1. Create new web directory<br />
+2. Move framework to the newly created web directory<br />
+3. cd into the directory above<br />
+4. Run framework/generate.php and follow the instructions<br />
 
 AVAILABLE OPERATIONS:
 1. Generate a new website
