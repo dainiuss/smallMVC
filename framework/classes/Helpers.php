@@ -28,9 +28,9 @@ class Helpers {
 	 * @return count
 	 */
 	public static function traceCount() {
-        static $count = 0;
-        $count++;
-        return $count;
+    	static $count = 0;
+    	$count++;
+    	return $count;
     }	
 	/** 
     * Display readable array/object - good for debugging
