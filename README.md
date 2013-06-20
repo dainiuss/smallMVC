@@ -46,3 +46,6 @@ smallMVC is a small PHP MVC framework
          </ul>
 
 </ul>
+
+<h3>TESTING:</h3>
+<p>Change TRACE to true in the main index.php file for function call trace output</p>
