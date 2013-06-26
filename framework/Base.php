@@ -36,7 +36,7 @@ abstract class Base{
 	private static $_application;
 	private static $_layoutPath = VIEW_PATH;
     
-    /**
+    	/**
 	 * @array of directories with classes inside to be autoloaded loaded
 	 */
 	private static $_loadClassDirectories = array(
@@ -51,7 +51,7 @@ abstract class Base{
 		'HttpRequest'    => '/classes/HttpRequest.php',
 		'Session'        => '/classes/Session.php',
 		'Captcha'        => '/classes/Captcha.php',
-        'Authentication' => '/classes/Authentication.php',
+        	'Authentication' => '/classes/Authentication.php',
 		'WebMain'        => '/classes/WebMain.php',
 		'MainController' => '/classes/MainController.php',
 		'MainAction'     => '/classes/MainAction.php',
@@ -126,8 +126,8 @@ abstract class Base{
 
 	/**
 	 * Create application - it is called in the main index file
-     * The first method to be called
-     * @param String $arguments
+     	 * The first method to be called
+     	 * @param String $arguments
 	 * @return the class to create - called from renderApplication
 	 */
 	public static function createApplication($arguments = null){
@@ -137,13 +137,13 @@ abstract class Base{
 
 	/**
 	 * Render application - private class called in the createApplication class
-     * Creates a new class with the name passed as argument $class
-     * Comment: this loads the WebMain class which has all framework functionality
-     * 
-     * @param type $class
-     * @param type $arguments
-     * @return a new class
-     */
+     	 * Creates a new class with the name passed as argument $class
+     	 * Comment: this loads the WebMain class which has all framework functionality
+     	 * 
+     	 * @param type $class
+     	 * @param type $arguments
+     	 * @return a new class
+     	 */
 	private static function renderApplication($class,$arguments = null){
 		Helpers::trace("Base", "renderApplication");
 		return new $class($arguments);
